@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="412.0" style="-fx-background-color: darkred; -fx-background-radius: 50 50 50 50;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunesplayer.gui.controller.TunesPlayerViewController">
+   <children>
+      <ButtonBar layoutX="28.0" layoutY="76.0" prefHeight="59.0" prefWidth="356.0">
+        <buttons>
+          <Button fx:id="playPauseBTN" mnemonicParsing="false" onAction="#playButton" prefHeight="34.0" prefWidth="272.0" style="-fx-background-color: darkred;" textFill="#ededed">
+               <font>
+                  <Font name="Bodoni MT Black Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#stopButton" prefHeight="28.0" style="-fx-background-color: darkred;" text="Stop" textFill="#f8f3f3">
+               <font>
+                  <Font name="Bodoni MT Black Italic" size="18.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="lblNowPlaying" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" layoutX="32.0" layoutY="45.0" prefHeight="31.0" prefWidth="350.0" style="-fx-background-color: pink; -fx-background-radius: 50 50 50 50;" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="138.0" text="Song Libary" textFill="#fffbfb">
+         <font>
+            <Font name="Bodoni MT Black Italic" size="16.0" />
+         </font></Label>
+      <Label fx:id="lblStatus" layoutX="101.0" layoutY="14.0" prefHeight="31.0" prefWidth="198.0" textFill="#fcfafa">
+         <font>
+            <Font name="Bodoni MT Black Italic" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblVLibary" blendMode="ADD" layoutX="45.0" layoutY="164.0" onMousePressed="#doubleClickMouse" prefHeight="200.0" prefWidth="333.0" style="-fx-background-color: pink; -fx-background-radius: 0 0 50 50;">
+        <columns>
+          <TableColumn fx:id="tclColumnTitle" prefWidth="163.0" text="Title" />
+          <TableColumn fx:id="tblColumnArtist" prefWidth="169.0" text="Artist" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="48.0" layoutY="369.0" prefHeight="40.0" prefWidth="179.0">
+        <buttons>
+          <Button fx:id="btnAddNewSong" mnemonicParsing="false" onAction="#addNewSong" style="-fx-background-color: darkred;" text="Add new song" textFill="#f5f4f4">
+               <font>
+                  <Font name="Bodoni MT Black Italic" size="14.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+      <Button layoutX="328.0" layoutY="377.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: darkred; -fx-background-radius: 50;" text="Close" textFill="#fcf7f7" />
+   </children>
+</AnchorPane>
